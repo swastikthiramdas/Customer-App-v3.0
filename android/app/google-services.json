@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1026006800173",
+    "project_id": "jyotishi-uttarkashi",
+    "storage_bucket": "jyotishi-uttarkashi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026006800173:android:ac4813157de3af0afde5a4",
+        "android_client_info": {
+          "package_name": "com.astrowaydiploy.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdUIIuSsxNsEyp07YTCgOpu4WdqNd-yHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026006800173:android:89cc07ad27130583fde5a4",
+        "android_client_info": {
+          "package_name": "com.jyotishi.user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdUIIuSsxNsEyp07YTCgOpu4WdqNd-yHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

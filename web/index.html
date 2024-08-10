@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="$FLUTTER_BASE_HREF" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Homzo" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>Homzo</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = null;
+    </script>
+    <!-- This script adds the fxlutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+
+    <script
+      type="application/javascript"
+      src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js"
+      defer
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app-check.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
+
+    <!-- Firebase initialization script -->
+    <script>
+      var firebaseConfig = {
+        // Your web app's Firebase configuration
+        apiKey: "AIzaSyAyiZi-oi6QilI2X-7hNcCgtbmRT2WLAhs",
+        authDomain: "astroway-diploy.firebaseapp.com",
+        databaseURL: "https://astroway-diploy-default-rtdb.firebaseio.com",
+        projectId: "astroway-diploy",
+        storageBucket: "astroway-diploy.appspot.com",
+        messagingSenderId: "381086206621",
+        appId: "1:381086206621:web:f09b5db876e2323d32e274",
+        measurementId: "G-XY1LD81J6X",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Initialize Firebase Messaging
+      const messaging = firebase.messaging();
+    </script>
+  </head>
+  <body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("../firebase-messaging-sw.js")
+          .then(function (registration) {
+            messaging.useServiceWorker(registration);
+
+            console.log(
+              "Registration successful, scope is:",
+              registration.scope
+            );
+          })
+          .catch(function (err) {
+            console.log("Service worker registration failed, error:", err);
+          });
+      }
+    </script>
+    <script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader
+          .loadEntrypoint({
+            serviceWorker: {
+              serviceWorkerVersion: serviceWorkerVersion,
+            },
+          })
+          .then(function (engineInitializer) {
+            return engineInitializer.initializeEngine();
+          })
+          .then(function (appRunner) {
+            return appRunner.runApp();
+          });
+      });
+    </script>
+    <script src="https://download.agora.io/staging/iris-web-rtc_n430_w4182_0.5.0.js"></script>
+  </body>
+</html>
